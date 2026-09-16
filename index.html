@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- UTF-8 characters -->
+    <meta charset="UTF-8" />
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Faizan Portfolio</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+
+    <!-- locomotive css -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- ================= LOADER ================= -->
+     
+    <div id="cursor"></div>
+    <div id="loader">
+      <!-- Top -->
+      <div class="loader-top">
+        <span>
+          <div class="logo">
+            <svg class="fa-logo" viewBox="0 0 300 200">
+              
+
+              <!-- F -->
+              <path
+                d="M60 40 H150 V65 H90 V90 H140 V115 H90 V165 H60 Z"
+                fill="white"
+              />
+
+              <!-- A -->
+              <path
+                d="M145 165 L195 40 L245 165 H215 L205 140 H185 L175 165 Z
+            M190 115 H200 L195 90 Z"
+                fill="white"
+              />
+
+              
+
+            <h2>FAIZAN <span>ANSARI</span></h2>
+          </div>
+        </span>
+
+        <span>2026</span>
+      </div>
+
+      <!-- Main Loader Content -->
+
+      <div class="loader-content">
+        <!-- Percentage -->
+        <h1 id="percentage">00%</h1>
+
+        <!-- Status -->
+        <p id="status">INITIALIZING...</p>
+
+        <!-- Terminal -->
+
+        <div class="terminal">
+          <p id="line1">> Loading frontend...</p>
+
+          <p id="line2">> Loading backend...</p>
+
+          <p id="line3">> Connecting database...</p>
+
+          <p id="line4">> Starting server...</p>
+        </div>
+
+        <!-- Progress Bar -->
+
+        <div class="progress-container">
+          <div id="progress"></div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+
+      <div class="loader-bottom">
+        <span>REACT</span>
+
+        <span>NODE</span>
+
+        <span>MONGODB</span>
+      </div>
+    </div>
+    <!-- ================= Nav  start================= -->
+
+   <div id="nav">
+
+    <div id="logo">
+
+        <svg class="fa-logo" viewBox="0 0 300 200">
+
+            <!-- F -->
+            <path
+                d="M60 40 H150 V65 H90 V90 H140 V115 H90 V165 H60 Z"
+                fill="white"
+            />
+
+            <!-- A -->
+            <path
+                d="M145 165 L195 40 L245 165 H215 L205 140 H185 L175 165 Z
+                M190 115 H200 L195 90 Z"
+                fill="white"
+            />
+
+        </svg>
+
+    </div>
+
+
+    <div id="nav-part2">
+
+        <h4 id="resume">
+            <a
+                href="https://ik.imagekit.io/vb7pclpdt5/songs/Images/Faizan_Ansari_Resume.pdf"
+                target="_blank"
+            >
+                Resume
+            </a>
+        </h4>
+
+
+        <!-- DESKTOP LINKS -->
+        <div id="desktop-links">
+
+            <h4 id="homeLink">Home</h4>
+            <h4 id="worksLink">Works</h4>
+            <h4 id="aboutLink">About</h4>
+            <h4 id="contactLink">Contacts</h4>
+
+        </div>
+
+
+        <!-- MOBILE HAMBURGER -->
+        <div id="mobile-menu-icon">
+            ☰
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<div id="mobile-menu">
+
+    <div class="mobile-menu-top">
+
+        <span>• MENU</span>
+
+        <button id="menu-close">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="mobile-menu-links">
+
+        <h4 data-target="homeLink">
+            HOME <span>•</span>
+        </h4>
+
+        <h4 data-target="worksLink">
+            PROJECTS
+        </h4>
+
+        <h4 data-target="aboutLink">
+            ABOUT
+        </h4>
+
+
+        <h4 data-target="contactLink">
+            CONTACT
+        </h4>
+
+    </div>
+
+
+    <div class="mobile-menu-bottom">
+
+        <div>
+
+            <small>(EMAIL)</small>
+
+            <a href="mailto:fa141166@gmail.com">
+                fa141166@gmail.com
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <small>(SOCIALS)</small>
+
+            <div class="mobile-socials">
+
+                <a href="https://www.instagram.com/faizan_ansari00013/?hl=en" target="_blank">
+                    Instagram ↗
+                </a>
+
+                <a href="https://www.linkedin.com/in/faizan-ansari-0b7106280" target="_blank">
+                    LinkedIn ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+ <!-- ================= Nav  end================= -->
+
+  <!-- ================= MAIN WEBSITE ================= -->
+  <div id="main" data-scroll-container>
+    <!-- ================= Page1 start ================= -->
+       <div id="page1">
+          <div class="hero">
+            <h1>I BUILD</h1>
+            </div>
+          <div class="hero">
+           <h1>FULL-STACK</h1>
+            </div>
+          <div class="hero">
+             <h1>DIGITAL</h1>
+            </div>
+
+            <div class="hero">
+             <h1>PRODUCTS</h1>
+            </div>
+      </div>
+    <!-- ================= Page1 end ================= -->
+     <!-- ================= Page2 start================= -->
+ <div id="page2"  data-scroll data-scroll-speed="2">
+  <h2>(About Me)</h2>
+            <h1>Hi, I’m Faizan, </h1>
+            <h1>a Full-Stack Developer </h1>
+            <h1>who enjoys building modern,</h1> 
+            <h1>interactive,and visually</h1>
+            <h1> appealing web experiences</h1>
+           
+              
+            <div id="peragraph">
+              <p>
+        I recently completed my BCA with a 7.55 CGPA and am currently
+        building and working on personal projects to strengthen my
+        frontend and backend skills, with a focus on clean UI,
+        smooth interactions, and practical web applications.
+    </p>
+  </div>
+
+      </div>
+   <!-- ================= Page2 end================= -->
+   <!-- ================= Teach-Stack start================= -->
+
+<div id="teach-Stack">
+
+    <h1>(Tech Stack)</h1>
+
+    <div class="tech-wrapper">
+
+        <!-- First set of icons -->
+        <div class="tech-icons">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js">
+
+            <img class="tech-icon express"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                alt="Express">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                alt="GitHub">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                alt="Postman">
+
+        </div>
+
+
+        <!-- Second set - same icons for seamless loop -->
+        <div class="tech-icons">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js">
+
+            <img class="tech-icon express"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                alt="Express">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                alt="GitHub">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code">
+
+            <img class="tech-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                alt="Postman">
+
+        </div>
+
+    </div>
+
+</div>
+  
+   <!-- ================= Teach-Stack end================= -->
+    <!-- ================= page3 start================= -->
+
+     <div id="page3">
+      <div id="footer-text">
+          <h1>Latest  Projects</h1>
+          <h2>Latest Projects</h2>  
+        </div>
+       <svg class="underline" viewBox="0 0 1000 10" preserveAspectRatio="none">
+    <path d="M 0 5 Q 500 5 1000 5" />
+</svg>
+     </div>  
+   <!-- ================= page3 end================= -->
+   <!-- ================= Project start================= -->
+
+        <section id="projects">
+
+
+            <!-- =============================================
+                 LEFT SIDE
+                 Ye ScrollTrigger ke through PIN rahega
+            ============================================== -->
+            <div class="project-left">
+
+
+                <!-- Project Number -->
+                <div class="project-number">
+                    01
+                </div>
+
+
+                <!-- Project Title -->
+                <h1 id="project-title">
+                    OBYS AGENCY
+                </h1>
+
+
+                <!-- Project Description -->
+                <p id="project-description">
+                    Designed and developed a digital experience
+                    featuring smooth animations and interactive
+                    scrolling experiences.
+                </p>
+
+
+                <!-- Technologies -->
+                <div id="project-tech">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JAVASCRIPT</span>
+                    <span>GSAP</span>
+
+                </div>
+
+
+                <!-- Project Link -->
+                <a
+                    id="project-link"
+                    href="#"
+                    target="_blank"
+                >
+                    View Project ↗
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 RIGHT SIDE
+                 Images JavaScript se automatically aayengi
+            ============================================== -->
+            <div
+                class="project-right"
+                id="project-right"
+            >
+
+            </div>
+
+
+        </section>
+
+   <!-- ================= Project End================= -->
+   <!-- ================= page4 start================= -->
+
+      <div id="page4">
+          
+    
+    <div class="ready-section">
+         
+        <div class="glow"></div>
+    <div class="glow-two"></div>
+    <div class="grid"></div>
+
+    <div class="orb"></div>
+    <div class="line1"></div>
+    
+
+
+
+
+        <h1>So, ready to animate?</h1>
+
+</div>
+      </div>
+    <!-- ================= page4 end ================= -->
+    <!-- ================= page5 Start================= -->
+
+     <section class="contact" id="contact" data-scroll data-scroll-speed="2">
+
+    <div class="glow"></div>
+    <div class="glow-two"></div>
+    <div class="grid"></div>
+
+    <div class="orb"></div>
+    <div class="line"></div>
+
+
+    <div class="contact-inner">
+
+        <!-- LEFT CONTENT -->
+
+        <div class="left">
+
+            <div class="available">
+                <span></span>
+                Available for new projects
+            </div>
+
+            <h1 id="h1">
+                LET'S<br>
+                <span class="outline">MAKE</span><br>
+                <span class="orange">IT HAPPEN.</span>
+            </h1>
+
+            <p class="description">
+                Have an idea, a project or just a crazy thought?
+                <strong>Let's turn it into something people remember.</strong>
+            </p>
+
+            <div class="socials">
+                <a href="https://www.instagram.com/faizan_ansari00013/?hl=en">Instagram ↗</a>
+                <a href="https://github.com/FaizanAnsari922">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/faizan-ansari-0b7106280">LinkedIn ↗</a>
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="form-card">
+
+            <div class="form-top">
+
+                <h2>Start a conversation.</h2>
+
+                <div class="arrow-circle">↗</div>
+
+            </div>
+
+
+            <form id="contactForm">
+
+                <div class="field">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Name"
+                        required
+                    >
+
+                    <label for="name">Your name</label>
+
+                </div>
+
+
+                <div class="field">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <label for="email">Your email</label>
+
+                </div>
+
+
+                <div class="field">
+
+                    <select id="project" required>
+
+                        <option value="" disabled selected>
+                            Project type
+                        </option>
+
+                        <option>Website</option>
+                        <option>Web Application</option>
+                        <option>Portfolio</option>
+                        <option>UI / UX Design</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <textarea
+                        id="message"
+                        placeholder="Message"
+                        required
+                    ></textarea>
+
+                    <label for="message">
+                        Tell me about your project
+                    </label>
+
+                </div>
+
+
+                <button class="submit" type="submit">
+
+                    SEND MESSAGE
+
+                    <span>↗</span>
+
+                </button>
+
+            </form>
+
+
+            <p class="bottom-text">
+                I usually reply within 24 hours.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER INFORMATION -->
+
+    <div class="contact-footer">
+
+        <div class="footer-block">
+
+            <span>(Email)</span>
+
+            <a href="mailto:fa141166@gmail.com">
+                fa141166@gmail.com
+            </a>
+
+            <span class="phone-label">(Phone)</span>
+
+            <a href="tel:+916396367497">
+                +91 6350207632
+            </a>
+
+        </div>
+
+<div class="footer-block">
+
+    <span>(Links)</span>
+<a href="#" id="footerHome">Home</a>
+<a href="#" id="footerWork">Work</a>
+<a href="#" id="footerAbout">About</a>
+<a href="#"id="footerContact">Contact</a>
+
+</div>
+
+
+        <div class="footer-block">
+
+            <span>(Socials)</span>
+
+            <a href="https://www.instagram.com/faizan_ansari00013/?hl=en">Instagram ↗</a>
+            <a href="https://github.com/FaizanAnsari922">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/faizan-ansari-0b7106280">LinkedIn ↗</a>
+            <a href="#">Discord ↗</a>
+
+        </div>
+
+
+        <div class="footer-block location">
+
+            <span>(Located At)</span>
+
+            <p>
+                Based out of Jaipur,<br>
+                Rajasthan, India 302031
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Faizan. All rights reserved. Unauthorized use prohibited.
+    </div>
+
+     </section>
+    <!-- ================= page5 end================= -->
+
+    </div>
+
+
+    <!-- ================= GSAP ================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+    <!-- ================= SCROLLTRIGGER ================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+
+    <!-- ================= Shery.js ================= -->
+
+
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+    <!-- ================= locomotive.js ================= -->
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- ================= YOUR JS ================= -->
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3003 @@
+
+/* Sabhi elements ka default margin/padding remove */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "Geist";
+    src: url("./GeistMedium-s.p.0kfs3qo8tum30.ttf") format("truetype");
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Anton";
+    src: url("./antonBold.ttf") format("truetype");
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "obys";
+    src: url("./ObysSans4.ttf") format("truetype");
+    font-style: normal;
+
+}
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.contact{
+    font-family: "obys";
+}
+
+
+
+/* Body */
+body {
+    width: 100%;
+    min-height: 100%;
+    background: #0b0b0b;
+    overflow-x: hidden;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: visible;
+}
+/* ================= curssor ================= */
+ 
+#cursor{
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    border: 1px solid #ffffffd5;
+    position: fixed;
+    z-index: 10000;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* ================= LOADER ================= */
+
+
+#loader {
+
+    /* Puri screen cover karega */
+    width: 100%;
+    height: 100vh;
+    font-family: monospace;
+
+    inset: 0;
+
+    /* Tumhara requested background */
+    background: #0b0b0b;
+
+    /* Text ka default color */
+    color: white;
+
+    /* Loader ke andar positioning ke liye */
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 9999;
+
+    /* Content ko vertically arrange karne ke liye */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 30px;
+}
+
+
+/* ================= TOP ================= */
+
+.loader-top {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+.logo {
+    width:3vw;
+}
+
+
+.logo h2 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.logo h2 span {
+    color: #fff;
+}
+/* ================= MAIN CONTENT ================= */
+
+.loader-content {
+
+    width: min(600px, 90%);
+
+    margin: auto;
+}
+
+
+/* Percentage */
+
+#percentage {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(70px, 12vw, 150px);
+
+    font-weight: 500;
+
+    letter-spacing: -8px;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+/* Status */
+
+#status {
+
+    font-size: 13px;
+
+    color: #777;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= TERMINAL ================= */
+
+.terminal {
+
+    margin-bottom: 35px;
+}
+
+
+.terminal p {
+
+    font-size: 13px;
+
+
+    margin-bottom: 8px;
+
+    opacity: 0.3;
+}
+
+.terminal #line1{
+    color:#B084FF;
+}
+
+
+.terminal #line2{
+    color:#5EA7FF;
+}
+
+
+.terminal #line3{
+    color:#55E6A5;
+}
+
+.terminal #line4{
+    color:#FFB86B;
+}
+
+
+/* ================= PROGRESS ================= */
+
+.progress-container {
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #292929;
+
+    overflow: hidden;
+}
+
+
+#progress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: white;
+}
+
+
+/* ================= BOTTOM ================= */
+
+.loader-bottom {
+
+    display: flex;
+
+    gap: 25px;
+
+    font-size: 10px;
+
+    color: #555;
+}
+
+
+/* ================= Main ================= */
+
+
+#main {
+    position: relative;
+    background-color: #0b0b0b;
+    width: 100%;
+
+}
+
+/* ================= Nav  ================= */
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-family: "obys";
+    color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 1.5vw;
+
+    z-index: 10000;
+
+    will-change: transform;
+
+    /* Initially transparent */
+    background: transparent;
+
+    transition:
+        transform 0.4s ease,
+        background 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+
+
+#desktop-links {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+#mobile-menu-icon {
+    display: none;
+}
+
+/* Jab navbar visible ho */
+#nav.nav-visible {
+    background: rgba(10, 10, 10, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#nav #logo {
+    height: 7vh;
+    width: 7vh;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#resume {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #fff;
+    animation: resumeAttention 2.5s ease-in-out infinite;
+}
+
+#resume a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Arrow */
+
+
+/* Glow + slight scale */
+@keyframes resumeAttention {
+    0%, 70%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 0 transparent;
+    }
+
+    78% {
+        transform: scale(1.08);
+        text-shadow:
+            0 0 8px #ff4d00,
+            0 0 20px rgba(255, 77, 0, .7);
+    }
+
+    86% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+/* ================= page1 background ================= */
+
+    #page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #0b0b0b;
+    color: white;
+    font-family:"obys", sans-serif;
+    padding: 1.5vw;
+    overflow: hidden;
+    position: relative;
+    
+    /* =================================
+       MAIN BACKGROUND
+       ================================= */
+
+    background-image:
+
+        /* Center orange glow */
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(173, 75, 38, 0.16) 0%,
+            rgba(173, 75, 38, 0.08) 22%,
+            transparent 55%
+        ),
+
+        /* Left subtle blue glow */
+        radial-gradient(
+            circle at 5% 50%,
+            rgba(60, 90, 180, 0.06),
+            transparent 35%
+        ),
+
+        /* Right subtle purple glow */
+        radial-gradient(
+            circle at 95% 35%,
+            rgba(100, 60, 160, 0.05),
+            transparent 35%
+        ),
+
+        /* Vertical grid */
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+
+        /* Horizontal grid */
+        linear-gradient(
+            0deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        80px 80px,
+        80px 80px;
+}
+
+   .mobile-about-text {
+    display: none;
+}
+
+
+/* =================================
+   DIAGONAL TECH LINES
+   ================================= */
+
+#page1::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            135deg,
+            transparent 49.7%,
+            rgba(255,255,255,0.035) 50%,
+            transparent 50.3%
+        ),
+
+        linear-gradient(
+            45deg,
+            transparent 49.7%,
+            rgba(255,255,255,0.02) 50%,
+            transparent 50.3%
+        );
+
+    background-size:
+        220px 220px,
+        300px 300px;
+
+    opacity: 0.6;
+}
+
+
+/* =================================
+   ORANGE DOT MATRIX
+   ================================= */
+
+#page1::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 280px;
+
+    right: 3%;
+    top: 25%;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(173, 75, 38, 0.55) 1px,
+            transparent 1.5px
+        );
+
+    background-size: 11px 11px;
+
+    opacity: 0.35;
+
+    /* Dots gradually disappear */
+    mask-image: linear-gradient(
+        to left,
+        black,
+        transparent
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to left,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+/* ================= page1 background end ================= */
+
+
+/* ================= Hero H1 effect================= */
+.hero{
+    width: 75%;
+    margin-left: 25%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.hero:nth-child(1){
+    margin-top:19vh;
+}
+
+.hero h1{
+    font-size:7.5vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 7vw;
+    perspective: 500px;
+    transition: color 0.3s ease;
+
+
+}
+
+
+/* Har letter */
+.hero h1 span {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.hero h1:hover span {
+    color: transparent;
+}
+
+.hero h1 {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.hero h1 span {
+    display: inline-block;
+
+    will-change: transform;
+
+
+}
+
+/* ================= page1 All  Completed ================= */
+
+/* ================= page2 Started  ================= */
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color:#0b0b0b;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+#page2 h1{
+    color:#272727;
+      font-size: 5vw;
+    font-weight: 600;
+    line-height:1;
+    letter-spacing: 0.7;
+     margin-left: 15vw;
+    font-family:"obys";
+    filter: blur(1px);
+}
+
+
+
+#page2 h2{
+    color:#F3F3F3;
+    font-family:"obys";
+    padding: 4vw;
+
+
+}
+
+
+
+#peragraph {
+    width: 30%;
+    position: absolute;
+    left: 65%;
+    top: 75%;
+}
+
+#peragraph p {
+    color: #272727;
+    text-transform: capitalize;
+    font-size: 1.5vw;
+    font-family: "Anton";
+    margin-top: 2vw;
+
+    opacity: 0;
+}
+
+
+/* ===========teach-Stack==============> */
+
+#teach-Stack{
+    height: fit-content;
+    width: fit-content;
+    padding: 2vw;
+    /* background-color: red; */
+}
+
+#teach-Stack h1{
+    padding: 4vw;
+    color: #CACACA;
+    font-family: "Anton";
+}
+.tech-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tech-icons {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    padding: 1vw;
+
+    /* dono groups ek continuous line me */
+    animation: anime 20s linear infinite;
+}
+
+.tech-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.8;
+    flex-shrink: 0;
+}
+
+/* IMPORTANT */
+.tech-icons:first-child {
+    margin-right: 30px;
+}
+
+@keyframes anime {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        /* ek complete group + uska gap */
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+/* Hover = Original color */
+.tech-icon:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+
+
+/* h1:hover{
+    color:#F15303;
+} */
+
+.express {
+    /* Black SVG → #CACACA */
+    filter: brightness(0) saturate(100%)
+            invert(82%) sepia(0%)
+            saturate(0%) brightness(94%);
+    
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.express:hover {
+    /* Back to original black */
+    filter: none;
+    transform: scale(1.1);
+     filter: invert(70%) sepia(20%) saturate(600%) hue-rotate(70deg);
+    
+}
+
+/* ===========page3 text animarion==============> */
+
+
+#page3{
+    width: 100%;
+    height: 45vh;
+    position: relative;
+    padding-left: 28vw;
+    bottom: -8vw;
+    background-color:#0b0b0b;
+    color: #CACACA;
+    font-family: "obys";
+    font-style: italic;
+    /* background-color: red; */
+
+}
+
+#page3 h1{
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    position: relative;
+    /* background-color: blue; */
+    
+
+}
+
+#page3 h1::before{
+    content: " ";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 200;
+    font-family: "silk serif";
+    left:-12%;
+    top: 5%;
+}
+
+#footer-text{
+    position: relative;
+}
+
+
+#footer-text h2 {
+    font-size: 7vw;
+    position: absolute;
+    top: -10%;
+    font-weight: 500;
+    left: 0;
+    font-family: "silk serif";
+    text-transform: uppercase;
+    opacity: 1;
+    /* background-color: red; */
+}
+
+#footer-text h2 span {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    text-transform: uppercase;
+    /* background-color: red; */
+    color: transparent;
+    opacity: 0;
+}
+
+.underline {
+    width: 100%;
+    height: 15px;
+    overflow: visible;
+    margin-top: 0.7vw;
+}
+
+.underline path {
+    fill: none;
+    stroke: #CACACA;
+    stroke-width: 3;
+}
+
+
+
+
+
+/* =========================================================
+   PROJECT SECTION
+========================================================= */
+
+#projects {
+
+    width: 100%;
+
+    /* 
+       300vh ka matlab:
+       Project section ki minimum height
+       viewport ki 3 times height hogi.
+    */
+
+    min-height: 300vh;
+
+    display: flex;
+
+    position: relative;
+
+    padding: 2vw;
+
+}
+
+
+
+
+/* =========================================================
+   PROJECT LEFT
+
+   IMPORTANT:
+   Yahan sticky nahi lagaya hai.
+   ScrollTrigger khud isko PIN karega.
+========================================================= */
+
+.project-left {
+
+    width: 45%;
+
+    height: 100vh;
+
+    /*
+       ScrollTrigger is element ko pin karega
+    */
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 2vw;
+
+    font-family: "obys";
+    margin-top: 5vw;
+
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+========================================================= */
+
+.project-number {
+
+    font-size: 8vw;
+
+    color: #333;
+
+    font-weight: 700;
+
+    position: absolute;
+
+    top: 1vw;
+
+    left: 2vw;
+
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
+.project-left h1 {
+
+    font-size: 3vw;
+
+    margin-bottom: 1.5vw;
+
+    font-weight: 600;
+
+    font-family: "Geist";
+
+    color: #CACACA;
+
+}
+
+
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
+
+.project-left p {
+
+    width: 80%;
+
+    font-size: 1.2vw;
+
+    line-height: 1.5;
+
+    color: #999;
+
+    margin-bottom: 2vw;
+
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+#project-tech {
+
+    display: flex;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+
+}
+
+
+#project-tech span {
+
+    border: 1px solid #444;
+
+    border-radius: 30px;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+
+    color: #ccc;
+
+}
+
+
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
+#project-link {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 2vw;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 1vw;
+
+    border-bottom: 1px solid white;
+
+    padding-bottom: 5px;
+
+    font-family: "obys";
+
+}
+
+
+/* =========================================================
+   RIGHT SIDE PROJECTS
+========================================================= */
+
+.project-right {
+
+    width: 55%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4vw;
+
+    padding: 2vw 2vw;
+
+}
+
+
+/* =========================================================
+   PROJECT IMAGE CONTAINER
+========================================================= */
+
+.project-image {
+
+    width: 100%;
+
+    height: 70vh;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    margin-left: 2vw;
+
+    /*
+       Image ke andar wala cursor hide
+       kar rahe hain.
+    */
+
+    cursor: none;
+
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+========================================================= */
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   VIEW PROJECT CIRCLE
+
+   Ye image ke andar mouse ko follow karega.
+========================================================= */
+
+.project-hover-link {
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: black;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 0.6vw;
+
+    font-weight: 700;
+
+    font-family: "obys";
+
+    /*
+       Circle ka center mouse ke exact
+       point par rahega.
+    */
+
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+}
+
+
+/* ================= page4 Started  ================= */
+
+#page4{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    background-color:#F3F3F3;
+    font-family:"obys", sans-serif;
+
+}
+
+.ready-section {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.ready-section h1 {
+    margin: 0;
+    white-space: nowrap;
+    font-weight: 500;
+    line-height: 1;
+    color:#0b0b0b;
+    width: max-content;
+    position: relative;
+    font-size: 15vw;
+
+}
+
+.ready-section h1 span {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
+.glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #ff4d00;
+    filter: blur(180px);
+    opacity: .14;
+    border-radius: 50%;
+    top: -180px;
+    left: -120px;
+}
+
+.glow-two {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #ff1500;
+    filter: blur(180px);
+    opacity: .10;
+    right: -150px;
+    bottom: -150px;
+    border-radius: 50%;
+}
+
+
+.line1 {
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff4d00,
+        transparent
+    );
+    right: 8%;
+    top: 15%;
+    transform: rotate(-35deg);
+}
+
+
+
+/* <===============Contact page start==================> */
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 5vw 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #ff4d00;
+    filter: blur(180px);
+    opacity: .14;
+    border-radius: 50%;
+    top: -180px;
+    left: -120px;
+}
+
+.glow-two {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #ff1500;
+    filter: blur(180px);
+    opacity: .10;
+    right: -150px;
+    bottom: -150px;
+    border-radius: 50%;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+/* .grid {
+    position: absolute;
+    inset: 0;
+    opacity: .08;
+    background-image:
+        linear-gradient(#fff 1px, transparent 1px),
+        linear-gradient(90deg, #fff 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 30%,
+        black 70%,
+        transparent
+    );
+} */
+
+
+/* =========================
+   DECORATION
+========================= */
+
+/* .orb {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ff4d00;
+    border-radius: 50%;
+    top: 12%;
+    right: 45%;
+    box-shadow: 0 0 20px rgba(255, 77, 0, .5);
+} */
+
+.line {
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff4d00,
+        transparent
+    );
+    right: 8%;
+    top: 15%;
+    transform: rotate(-35deg);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.contact-inner {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 65px;
+    align-items: center;
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.left {
+    position: relative;
+}
+
+.available {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 15px;
+
+    border: 1px solid rgba(255, 77, 0, .4);
+    border-radius: 50px;
+
+    color: #ff6a2a;
+    background: rgba(255, 77, 0, .04);
+
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+.available span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+
+    background: #ff4d00;
+    box-shadow: 0 0 15px #ff4d00;
+}
+
+#h1{
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(65px, 7.5vw, 120px);
+    line-height: .84;
+
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    font-weight: 600;
+    color:#CACACA;
+}
+
+h1 .outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #cacaca;
+}
+
+h1 .orange {
+    color: #cacaca;
+}
+
+.description {
+    max-width: 480px;
+    margin-top: 30px;
+
+    color: #999;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: "obys";
+
+}
+
+.description strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    font-family: "obys";
+
+}
+
+.socials a {
+    color: #aaa;
+    text-decoration: none;
+
+    border: 1px solid #292929;
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    transition: .3s ease;
+}
+
+.socials a:hover {
+    color: #fff;
+    border-color: #ff4d00;
+    background: rgba(255, 77, 0, .08);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+/* =========================
+   FORM CARD — COMPACT
+========================= */
+
+.form-card {
+    position: relative;
+    padding: 1.5vw;
+    top: 1vw;
+    font-family: "obys";
+
+    border-radius: .8vw;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .09),
+            rgba(255, 255, 255, .025)
+        );
+    border: 1px solid rgba(255, 255, 255, .12);
+    backdrop-filter: blur(25px);
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, .5),
+        inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+.form-card::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ff4d00;
+    filter: blur(60px);
+    opacity: .15;
+    top: -30px;
+    right: -20px;
+    pointer-events: none;
+}
+
+/* =========================
+   FORM TOP
+========================= */
+
+.form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #CACACA;
+
+
+}
+
+.form-top h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.arrow-circle {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #ff4d00;
+    font-size: 17px;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+
+.field {
+    position: relative;
+    margin-bottom: 18px;
+
+}
+
+.field input,
+.field textarea,
+.field select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    color: #fff;
+    padding: 10px 0;
+    font-family: inherit;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.field textarea {
+    height: 75px;
+    resize: none;
+}
+
+.field select {
+    color: #888;
+}
+
+.field select option {
+    background: #111;
+    color: #fff;
+}
+
+.field label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #666;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    border-color: #ff4d00;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
+    transform: translateY(-18px);
+    font-size: 9px;
+    color: #ff4d00;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: transparent;
+}
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit {
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 17px 22px;
+
+    border: 1px solid #ff4d00;
+    border-radius: 50px;
+
+    background: #ff4d00;
+    color: #080808;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: .35s ease;
+}
+
+.submit span {
+    font-size: 21px;
+    transition: .35s ease;
+}
+
+.submit:hover {
+    background: transparent;
+    color: #ff4d00;
+
+    box-shadow: 0 0 35px rgba(255, 77, 0, .18);
+}
+
+.submit:hover span {
+    transform: translateX(8px) translateY(-3px);
+}
+
+.bottom-text {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.contact-footer {
+    width: 100%;
+    max-width: 1250px;
+
+
+    margin: 65px auto 0;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+    display: grid;
+    grid-template-columns: 1.5fr .7fr .8fr 1fr;
+
+    gap: 40px;
+
+    position: relative;
+    z-index: 3;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer-block > span:first-child {
+    color: #666;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.footer-block a {
+    width: fit-content;
+
+    color: #aaa;
+    text-decoration: none;
+
+    font-size: 13px;
+    line-height: 1.3;
+
+    transition: .3s ease;
+}
+
+.footer-block a:hover {
+    color: #ff4d00;
+    transform: translateX(4px);
+}
+
+.footer-block p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footer-block .phone-label {
+    margin-top: 10px;
+    color: #CACACA;
+}
+
+.footer-block:first-child a:first-of-type {
+    color: #ff4d00;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 45px auto 0;
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, .05);
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 10px;
+    letter-spacing: .3px;
+
+    position: relative;
+    z-index: 3;
+}
+
+/* =====================================
+   Responsive start here 
+======================================== */
+
+
+/* =====================================
+   Mobile responsive here 
+======================================== */
+
+  /* =========================
+   NAVBAR
+========================= */
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: 400;
+    font-family: "obys";
+    color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 1.5vw;
+
+    z-index: 10000;
+
+    will-change: transform;
+
+    background: transparent;
+
+    transition:
+        transform 0.4s ease,
+        background 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+
+
+#nav.nav-visible {
+    background: rgba(10, 10, 10, 0.45);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* LOGO */
+
+#nav #logo {
+    height: 7vh;
+    width: 7vh;
+}
+
+
+#nav #logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* NAV RIGHT */
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2vw;
+
+    cursor: pointer;
+}
+
+
+/* LINKS */
+
+#desktop-links {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+
+#desktop-links h4 {
+    font-weight: 400;
+}
+
+
+/* RESUME */
+
+#resume {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    color: #fff;
+
+    animation: resumeAttention 2.5s ease-in-out infinite;
+}
+
+
+#resume a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@keyframes resumeAttention {
+
+    0%,
+    70%,
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0 transparent;
+    }
+
+    78% {
+        transform: scale(1.08);
+
+        text-shadow:
+            0 0 8px #ff4d00,
+            0 0 20px rgba(255, 77, 0, 0.7);
+    }
+
+    86% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+#mobile-menu-icon {
+    display: none;
+
+    color: #fff;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10002;
+}
+
+
+/* =========================
+   MOBILE MENU DEFAULT
+========================= */
+
+#mobile-menu {
+    display: none;
+}
+
+
+#menu-close {
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+}
+
+.mobile-projects {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    #nav {
+        padding: 5vw;
+        z-index: 10000;
+    }
+
+
+    #nav #logo {
+        height: 4vh;
+        width: 4vh;
+    }
+
+
+    #desktop-links {
+        display: none;
+    }
+
+
+    #mobile-menu-icon {
+        display: block;
+
+        font-size: 5.5vw;
+    }
+
+
+    #nav-part2 {
+        gap: 5vw;
+    }
+
+
+    #resume {
+        font-size: 3vw;
+        margin-right: 1vw;
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    #mobile-menu {
+        position: fixed;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100vh;
+
+        background: #050505;
+
+        color: #fff;
+
+        z-index: 10001;
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 10px 16px 20px;
+
+        transform: translateX(100%);
+
+        transition:
+            transform 0.5s cubic-bezier(.77, 0, .18, 1);
+
+        overflow-y: auto;
+    }
+
+
+    #mobile-menu.active {
+        transform: translateX(0);
+    }
+
+
+    /* TOP */
+
+    .mobile-menu-top {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+
+    .mobile-menu-top span {
+        font-family: "obys";
+
+        font-size: 8px;
+
+        color: #ff4d00;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* CLOSE BUTTON */
+
+    #menu-close {
+        width: 34px;
+        height: 34px;
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+
+        border-radius: 50%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 27px;
+
+        font-weight: 200;
+
+        line-height: 1;
+    }
+
+
+    /* LINKS */
+
+    .mobile-menu-links {
+        margin-top: 8px;
+    }
+
+
+    .mobile-menu-links h4 {
+        margin: 0;
+
+        padding: 13px 6px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+        font-family: "obys";
+
+        font-size: 12px;
+
+        font-weight: 400;
+
+        color: #999;
+
+        cursor: pointer;
+
+        transition:
+            color 0.25s ease,
+            padding-left 0.25s ease;
+    }
+
+
+    .mobile-menu-links h4:first-child {
+        color: #fff;
+    }
+
+
+    .mobile-menu-links h4:hover {
+        color: #fff;
+
+        padding-left: 12px;
+    }
+
+
+    .mobile-menu-links h4 span {
+        color: #ff4d00;
+
+        font-size: 10px;
+    }
+
+
+    /* BOTTOM */
+
+    .mobile-menu-bottom {
+        margin-top: auto;
+
+        padding: 30px 6px 0;
+    }
+
+
+    .mobile-menu-bottom small {
+        display: block;
+
+        font-family: "obys";
+
+        font-size: 7px;
+
+        color: #777;
+
+        margin-bottom: 8px;
+    }
+
+
+    .mobile-menu-bottom a {
+        display: inline-block;
+
+        font-family: "obys";
+
+        font-size: 10px;
+
+        color: #ff4d00;
+
+        text-decoration: none;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* SOCIALS */
+
+    .mobile-socials {
+        display: flex;
+
+        gap: 25px;
+    }
+
+
+    .mobile-socials a {
+        color: #aaa;
+
+        font-size: 10px;
+
+        margin: 0;
+    }
+
+
+    .mobile-socials a:hover {
+        color: #fff;
+    }
+
+
+    
+/* ================= page1 background ================= */
+
+    #page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0b0b0b;
+    color: white;
+    font-family:"obys", sans-serif;
+    padding: 1.5vw;
+    overflow: hidden;
+    position: relative;
+    
+    }
+
+ 
+    .mobile-about-text {
+
+        display: block;
+
+        width: 88%;
+
+        margin: 15px auto 0;
+
+        font-family: "obys";
+
+        font-size: 11px;
+
+        line-height: 1.35;
+
+        text-align: center;
+
+        color: #999;
+
+        perspective: 500px;
+    }
+
+    .mobile-about-text span {
+
+        display: inline-block;
+
+        transform-style: preserve-3d;
+    }
+
+    
+
+ /* =========================
+   PAGE 1 HERO TEXT
+========================= */
+
+.hero {
+    width:95%;
+    margin-left: 5%;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.hero:nth-child(1) {
+    margin-top: 25vh;
+}
+
+.hero h1 {
+    font-size:14vw;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+
+/* =========================
+   EVERY LETTER
+========================= */
+
+.hero h1 span {
+    display: inline-block;
+    transition: color 0.3s ease;
+
+    will-change: transform;
+}
+
+
+/* HOVER */
+
+.hero h1:hover span {
+    color: transparent;
+}
+
+
+
+/* ================= page2 Started  ================= */
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color:#0b0b0b;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+#page2 h1{
+    color:#272727;
+      font-size: 10.5vw;
+    font-weight: 600;
+    line-height:1;
+    letter-spacing: 0.7;
+     margin-left: 4vw;
+    font-family:"obys";
+    filter: blur(1px);
+}
+
+#page2 h1:nth-child(2){
+    margin-top: 4vw;
+}
+
+
+#page2 h2{
+    color:#F3F3F3;
+    font-family:"obys";
+    padding: 2vw;
+    margin-top: 15vw;
+
+
+}
+
+
+
+#peragraph {
+    width:100%;
+    position: absolute;
+    left: 2%;
+    top: 56%;
+    padding: 5vw;
+    /* background-color: red; */
+}
+
+#peragraph p {
+    color: #272727;
+    text-transform: capitalize;
+    font-size: 5vw;
+    font-family: "Anton";
+    opacity: 0;
+}
+
+
+/* =========================
+   Page2 End
+========================= */
+
+/* =========================
+   Tech  Stack start 
+========================= */
+
+
+    /* TECH STACK SECTION */
+    #teach-Stack {
+        width: 100%;
+        height: fit-content;
+        padding: 0 6vw;
+        margin-bottom: 15vw;
+
+    }
+
+
+    /* TECH STACK HEADING */
+    #teach-Stack h1 {
+        padding: 2vw  7vw;
+        margin: 0 0 5vw 0;
+
+        font-size: 6vw;
+        line-height: 1;
+
+        color: #CACACA;
+        font-family: "Anton";
+    }
+
+
+    /* ICONS WRAPPER */
+    .tech-wrapper {
+        width: 100%;
+        overflow: hidden;
+
+        margin: 0;
+    }
+
+
+    /* ICONS */
+    .tech-icons {
+        gap: 25px;
+        padding: 1vw;
+
+        animation: anime 15s linear infinite;
+    }
+
+
+    .tech-icon {
+        width: 44px;
+        height: 44px;
+
+        opacity: 0.8;
+    }
+
+
+    /* EXPRESS */
+    .express {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* =========================
+   Tech  Stack End 
+========================= */
+
+
+
+ 
+/* ===========page3 text animarion==============> */
+
+
+#page3{
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    padding-left: 15vw;
+    bottom: -8vw;
+    background-color:#0b0b0b;
+    color: #CACACA;
+    font-family: "obys";
+    font-style: italic;
+    /* background-color: red; */
+
+}
+
+#page3 h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    position: relative;
+    /* background-color: blue; */
+    
+
+}
+
+#page3 h1::before{
+    content: " ";
+    position: absolute;
+    font-size: 7vw;
+    font-weight: 200;
+    font-family: "silk serif";
+    left:-12%;
+    top: 5%;
+}
+
+#footer-text h1{
+    position: relative;
+    font-size: 9vw;
+}
+
+
+#footer-text h2 {
+    font-size: 9vw;
+    position: absolute;
+    top: -10%;
+    font-weight: 500;
+    left: 0;
+    font-family: "silk serif";
+    text-transform: uppercase;
+    opacity: 1;
+    /* background-color: red; */
+}
+
+#footer-text h2 span {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    text-transform: uppercase;
+    /* background-color: red; */
+    color: transparent;
+    opacity: 0;
+}
+
+.underline {
+    width: 100%;
+    height: 18px;
+    overflow: visible;
+    margin-top: 0.9vw;
+}
+
+.underline path {
+    fill: none;
+    stroke: #CACACA;
+    stroke-width: 3;
+}
+
+/* =====================================================
+   MOBILE PROJECT RESPONSIVE
+===================================================== */
+
+  /* =================================================
+       PROJECT SECTION
+    ================================================= */
+
+    #projects {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        padding: 10px;
+        display: block;
+    }
+
+
+    /* =================================================
+       DESKTOP PROJECT SYSTEM HIDE
+    ================================================= */
+
+    .project-left,
+    .project-right {
+        display: none;
+    }
+
+
+    /* =================================================
+       MOBILE PROJECTS
+    ================================================= */
+
+    .mobile-projects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+
+    /* =================================================
+       EACH CARD
+    ================================================= */
+
+    .mobile-project-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* =================================================
+       IMAGE
+    ================================================= */
+
+    .mobile-project-image {
+        width: 100%;
+        height: 42vh;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+
+    .mobile-project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    /* =================================================
+       CONTENT
+    ================================================= */
+
+    .mobile-project-content {
+        width: 100%;
+        padding-top: 14px;
+    }
+
+
+    /* =================================================
+       NUMBER
+    ================================================= */
+
+    .mobile-project-number {
+        font-family: "Geist";
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+
+    /* =================================================
+       TITLE
+    ================================================= */
+
+    .mobile-project-content h2 {
+        font-family: "Geist";
+        font-size: 24px;
+        line-height: 1.1;
+        color: #CACACA;
+        margin: 0 0 10px 0;
+    }
+
+
+    /* =================================================
+       DESCRIPTION
+    ================================================= */
+
+    .mobile-project-content p {
+        width: 100%;
+        font-family: "obys";
+        font-size: 11px;
+        line-height: 1.5;
+        color: #999;
+        margin: 0 0 15px 0;
+    }
+
+
+    /* =================================================
+       TECHNOLOGIES
+    ================================================= */
+
+    .mobile-project-tech {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+
+    .mobile-project-tech span {
+        border: 1px solid #444;
+        border-radius: 30px;
+        padding: 6px 11px;
+        font-family: "Geist";
+        font-size: 9px;
+        color: #ccc;
+    }
+
+
+    /* =================================================
+       LIVE DEMO
+    ================================================= */
+
+    .mobile-project-content a {
+        display: inline-block;
+
+        margin-top: 15px;
+
+        padding: 7px 13px;
+
+        border: 1px solid #F55903;
+
+        border-radius: 30px;
+
+        color: #F55903;
+
+        text-decoration: none;
+
+        font-family: "Geist";
+
+        font-size: 11px;
+    }
+
+
+    /* =================================================
+       MOBILE HOVER CIRCLE HIDE
+    ================================================= */
+
+    .project-hover-link {
+        display: none;
+    }   
+
+ /* =================================================
+       page 4 text animation 
+    ================================================= */
+
+
+    #page4 {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .ready-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .ready-section h1 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        font-size: 25vw;
+        line-height: 0.82;
+
+        text-align: center;
+
+        white-space: normal;
+    }
+
+    /* ===============================
+       EACH WORD = EACH LINE
+    =============================== */
+
+    .mobile-word {
+        display: block;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    /* ===============================
+       EACH LETTER
+    =============================== */
+
+    .mobile-letter {
+        display: inline-block;
+    }
+
+    /* ===============================
+       GLOW
+    =============================== */
+
+    .glow {
+        width: 280px;
+        height: 280px;
+        filter: blur(100px);
+        opacity: .12;
+        top: -100px;
+        left: -120px;
+    }
+
+    .glow-two {
+        width: 250px;
+        height: 250px;
+        filter: blur(100px);
+        opacity: .08;
+        right: -120px;
+        bottom: -120px;
+    }
+
+    /* ===============================
+       ORANGE LINE
+    =============================== */
+
+    .line1 {
+        width: 100px;
+        right: 5%;
+        top: 17%;
+    }
+
+    /* =====================================================
+   CONTACT PAGE - MOBILE
+===================================================== */
+
+
+    /* =========================
+       CONTACT SECTION
+    ========================= */
+
+    .contact {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+
+        padding: 75px 14px 25px;
+
+        display: block;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       CONTACT INNER
+    ========================= */
+
+    .contact-inner {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 45px;
+
+        align-items: stretch;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       LEFT SIDE
+    ========================= */
+
+    .left {
+        width: 100%;
+
+        position: relative;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       AVAILABLE
+    ========================= */
+
+    .available {
+
+        display: inline-flex;
+
+        padding: 7px 12px;
+
+        gap: 7px;
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .available span {
+
+        width: 5px;
+        height: 5px;
+    }
+
+
+    /* =========================
+       HEADING
+    ========================= */
+
+    #h1 {
+
+        width: 100%;
+
+        margin: 0;
+
+        font-size: 17vw;
+
+        line-height: .82;
+
+        letter-spacing: -2px;
+
+        font-weight: 600;
+
+        color: #CACACA;
+    }
+
+
+    /* =========================
+       OUTLINE
+    ========================= */
+
+    h1 .outline {
+
+        -webkit-text-stroke: 1px #CACACA;
+    }
+
+
+    /* =========================
+       DESCRIPTION
+    ========================= */
+
+    .description {
+
+        width: 90%;
+
+        max-width: none;
+
+        margin-top: 22px;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+
+        color: #999;
+    }
+
+
+    /* =========================
+       SOCIALS
+    ========================= */
+
+    .socials {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+        margin-top: 18px;
+    }
+
+
+    .socials a {
+
+        padding: 8px 12px;
+
+        font-size: 8px;
+    }
+
+
+    /* =================================================
+       RIGHT / CONTACT FORM
+    ================================================= */
+
+    .contact-inner > :nth-child(2) {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .contact form {
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       FORM INPUTS
+    ========================= */
+
+    .contact input,
+    .contact textarea,
+    .contact select {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       FORM BUTTON
+    ========================= */
+
+    .contact button {
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       GLOW
+    ========================= */
+
+    .glow {
+
+        width: 260px;
+        height: 260px;
+
+        filter: blur(100px);
+
+        opacity: .10;
+
+        top: -100px;
+        left: -130px;
+    }
+
+
+    .glow-two {
+
+        width: 230px;
+        height: 230px;
+
+        filter: blur(100px);
+
+        opacity: .07;
+
+        right: -120px;
+        bottom: -100px;
+    }
+
+
+    /* =========================
+       ORANGE LINE
+    ========================= */
+
+    .line {
+
+        width: 80px;
+
+        right: 2%;
+
+        top: 15%;
+
+        transform: rotate(-35deg);
+    }
+
+    .contact-footer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 25px;
+        padding: 0 4px;
+        box-sizing: border-box;
+    }
+
+    .contact-footer > div {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contact-footer p,
+    .contact-footer a,
+    .contact-footer span {
+        font-size: 17px;
+        line-height: 1.6;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .contact-footer h4 {
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+
+    .contact-footer a {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 3px;
+    }
+
+    .contact-footer .location {
+        grid-column: 1 / -1;
+        margin-top: -5px;
+    }
+
+    .contact-footer .copyright {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 7px;
+        margin-top: 5px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   LOADER
+========================= */
+
+#loader {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+}
