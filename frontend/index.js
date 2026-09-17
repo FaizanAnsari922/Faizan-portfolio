@@ -1680,8 +1680,7 @@ contactForm.addEventListener("submit", function (e) {
     submitButton.disabled = true;
 
 
-    fetch("http://localhost:3000/contact", {
-
+   fetch("https://faizan-portfolio-e1je.vercel.app/contact", {
         method: "POST",
 
         headers: {
