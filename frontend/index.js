@@ -1,3 +1,4 @@
+// <=======Smooth scrooler=======>
 function smoothScroll() {
 
     gsap.registerPlugin(ScrollTrigger);
@@ -214,9 +215,7 @@ if (footerContact) {
 }
 
 }
-
 smoothScroll();
-
 // <=======Loader=======>
 function loader() {
   var count = 0;
@@ -319,7 +318,6 @@ function loader() {
   });
 }
 loader();
-
 // <======Cursor Animation======>
 function cursorAnimation() {
   document.addEventListener("mousemove", function (dets) {
@@ -332,9 +330,7 @@ function cursorAnimation() {
   Shery.makeMagnet("#nav-part2 h4");
 }
 cursorAnimation();
-
 // <======Hero Text======>
-
 function Herotext() {
   // ===============================
   // HERO HOVER LETTER ANIMATION
@@ -384,9 +380,7 @@ function Herotext() {
   });
 }
 Herotext();
-
 // <=============tech Stack=======>
-
 function AboutMe() {
 
     var Allh1text = document.querySelectorAll("#page2 h1");
@@ -456,12 +450,8 @@ function AboutMe() {
    
 
 }
-
 AboutMe();
-
-
 // <=============page 4 text hover  animation =======>
-
 function footerAnimation() {
 
   var clutter = "";
@@ -563,12 +553,7 @@ document.querySelector("#footer-text").addEventListener("mouseleave", function (
 
 }
 footerAnimation();
-
-
-
 // <=========page4 curve underline effect ========>
-
-
 function underline() {
 
     const svg = document.querySelector(".underline");
@@ -606,12 +591,8 @@ function underline() {
     });
 
 }
-
 underline();
-
 // <=========Project Section  ========>
-
-
 function projectSection() {
 
     // =====================================================
@@ -1191,12 +1172,8 @@ function projectSection() {
     ScrollTrigger.refresh();
 
 }
-
-
 projectSection();
-
 // <=========page4 text animation ========>
-
 function readyTextAnimation() {
 
     var heading = document.querySelector("#page4 .ready-section h1");
@@ -1569,11 +1546,10 @@ function readyTextAnimation() {
     }
 
 }
-
 readyTextAnimation();
-
 // <=================Contact page ===============>
-  const form = document.querySelector("#contactForm");
+function contactPage(){
+      const form = document.querySelector("#contactForm");
 
 form.addEventListener("submit", function(e) {
 
@@ -1609,13 +1585,13 @@ contact.addEventListener("mousemove", (e) => {
 
 });
 
-
+}
 // <=================Nav Link handel               @media (max-width: 767px)  mobile view===============>
-
 /* =========================
    MOBILE MENU
 ========================= */
-
+function mobileMenu(){
+    
 const menuIcon = document.querySelector("#mobile-menu-icon");
 const mobileMenu = document.querySelector("#mobile-menu");
 const menuClose = document.querySelector("#menu-close");
@@ -1670,6 +1646,106 @@ mobileLinks.forEach(function (link) {
 
 
         mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+
+
+}
+mobileMenu()
+
+const contactForm = document.querySelector("#contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const name = document.querySelector("#name").value;
+    const email = document.querySelector("#email").value;
+    const projectType = document.querySelector("#project").value;
+    const message = document.querySelector("#message").value;
+
+    // Send button ko select kar rahe hain
+    const submitButton = contactForm.querySelector(".submit");
+
+    // Button ke andar ka original text save kar rahe hain
+    const originalText = submitButton.innerHTML;
+
+    // User ko batao ki message ja raha hai
+    submitButton.innerHTML = "SENDING...";
+
+    // Button ko temporarily disable karo
+    submitButton.disabled = true;
+
+
+    fetch("http://localhost:3000/contact", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            projectType: projectType,
+            message: message
+        })
+
+    })
+
+    .then(response => response.json())
+
+    .then(data => {
+
+        if (data.success) {
+
+            // Success message
+            submitButton.innerHTML = "MESSAGE SENT ✓";
+
+            // Form clear
+            contactForm.reset();
+
+            // 2 second baad button normal
+            setTimeout(() => {
+
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+
+            }, 2000);
+
+        } else {
+
+            // Backend ne error diya
+            submitButton.innerHTML = "FAILED ✕";
+
+            setTimeout(() => {
+
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+
+            }, 2000);
+
+        }
+
+    })
+
+    .catch(error => {
+
+        console.log("Error:", error);
+
+        // Backend connect nahi hua
+        submitButton.innerHTML = "ERROR ✕";
+
+        setTimeout(() => {
+
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+
+        }, 2000);
 
     });
 
