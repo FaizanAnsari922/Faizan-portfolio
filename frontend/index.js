@@ -602,7 +602,31 @@ function projectSection() {
     const projects = [
 
         {
-            number: "01",
+    number: "01",
+
+    title: "TOGETHER",
+
+    description:
+        "A private space built for two people to connect without the distractions of social media. Together lets you create a private room and chat in real time, make voice and video calls, and share your screen while staying connected.",
+
+    image:
+        "https://ik.imagekit.io/vb7pclpdt5/songs/Images/Together_%20A%20Neon%20Private%20Space.png",
+
+    link:
+        "https://www.togethers.world/",
+
+    tech: [
+        "REACT",
+        "NODE.JS",
+        "EXPRESS.JS",
+        "MONGODB",
+        "SOCKET.IO",
+        "WEBRTC"
+    ]
+},
+
+        {
+            number: "02",
 
             title: "OBYS-AGENCY",
 
@@ -626,7 +650,7 @@ function projectSection() {
 
 
         {
-            number: "02",
+            number: "03",
 
             title: "REFOKUS.",
 
@@ -650,7 +674,7 @@ function projectSection() {
 
 
         {
-            number: "03",
+            number: "04",
 
             title: "EXO APE",
 
@@ -673,7 +697,7 @@ function projectSection() {
 
 
         {
-            number: "04",
+            number: "05",
 
             title: "CYNTHIA UGWU®",
 
@@ -1656,6 +1680,9 @@ mobileLinks.forEach(function (link) {
 }
 mobileMenu()
 
+
+function connectBackend(){
+    
 const contactForm = document.querySelector("#contactForm");
 
 contactForm.addEventListener("submit", function (e) {
@@ -1749,3 +1776,5 @@ contactForm.addEventListener("submit", function (e) {
     });
 
 });
+}
+connectBackend()
