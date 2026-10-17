@@ -610,7 +610,7 @@ function projectSection() {
         "A private space built for two people to connect without the distractions of social media. Together lets you create a private room and chat in real time, make voice and video calls, and share your screen while staying connected.",
 
     image:
-        "https://ik.imagekit.io/vb7pclpdt5/songs/Images/Together_%20A%20Neon%20Private%20Space.png",
+        "https://ik.imagekit.io/vb7pclpdt5/songs/Images/Neon%20Together%20Workspace%20Laptop.png",
 
     link:
         "https://www.togethers.world/",
